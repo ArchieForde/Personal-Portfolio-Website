@@ -6,10 +6,10 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-black text-white">
+    <div className="flex flex-col items-center justify-start h-screen text-white bg-transparent z-10 pt-32">
       <SplitText
-        text="Welcome to My Cyber Portfolio"
-        className="text-5xl font-bold"
+        text="Welcome to My Personal Portfolio"
+        className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-snug text-center"
         delay={100}
         duration={0.6}
         ease="power3.out"
@@ -22,7 +22,7 @@ export default function Home() {
         onLetterAnimationComplete={handleAnimationComplete}
         tag="h1"
       />
-      <p className="mt-6 text-gray-400 text-lg">
+      <p className="mt-2 text-gray-300 text-lg text-lower max-w-xl px-1">
         Exploring the intersection of <span className="text-cyan-400">React</span> ⚛️ and{" "}
         <span className="text-green-400">Cybersecurity</span> 🧠
       </p>
