@@ -33,8 +33,18 @@ const contacts = [
     ),
   },
   {
+    label: "TryHackMe",
+    sub: "tryhackme.com/p/fordey19",
+    href: "https://tryhackme.com/p/fordey19",
+    icon: (
+      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+      </svg>
+    ),
+  },
+  {
     label: "Location",
-    sub: "UK · Open to relocate",
+    sub: "EU Citizen · UK Citizen · Dual National · Open to Relocation",
     href: "#",
     icon: (
       <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -53,7 +63,7 @@ export default function Contact() {
       subtitle="Open to cybersecurity, AI security, and quantum-safe security roles. Reach out below."
     >
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-        {contacts.map((c, i) => {
+        {contacts.filter((c) => c.label !== "Location").map((c, i) => {
           const external = c.href.startsWith("http");
           return (
             <Reveal key={c.label} delay={i * 100} className="card group">
@@ -75,6 +85,25 @@ export default function Contact() {
                 </span>
               </a>
             </Reveal>
+          );
+        })}
+        {contacts.filter((c) => c.label === "Location").map((c) => {
+          return (
+            <div key={c.label} className="sm:col-span-2 flex justify-center">
+              <Reveal delay={4 * 100} className="card group">
+                <div className="flex items-center gap-4 p-7 transition-colors">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-surface-2 font-mono text-sm font-bold text-accent ring-1 ring-border">
+                    {c.icon}
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-lg font-medium text-text">{c.label}</span>
+                    <span className="block truncate font-mono text-xs text-muted">
+                      {c.sub}
+                    </span>
+                  </span>
+                </div>
+              </Reveal>
+            </div>
           );
         })}
       </div>

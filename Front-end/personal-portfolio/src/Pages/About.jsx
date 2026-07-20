@@ -55,7 +55,7 @@ const skillGroups = [
   {
     title: "Languages",
     items: [
-      { name: "Python", level: 5 },
+      { name: "Python", level: 4 },
       { name: "C#", level: 4 },
       { name: "Bash", level: 4 },
       { name: "SQL", level: 3 },
@@ -74,6 +74,16 @@ const skillGroups = [
 
 const certifications = [
   {
+    name: "CompTIA Security+",
+    issuer: "CompTIA · In Progress",
+    body: "Currently studying core security domains: network security, cryptography, identity and access management, risk management, and incident response. Building on the foundational knowledge from the Google Cybersecurity certification with a deeper focus on enterprise security architecture and compliance frameworks.",
+  },
+  {
+    name: "Level 1 SOC Analyst",
+    issuer: "TryHackMe · In Progress",
+    body: "Developing practical SOC analyst skills through hands-on labs. Learning log analysis, SIEM tooling, alert triage, threat hunting, and incident response workflows. I am working through real-world scenarios to build the operational skills needed for a Level 1 SOC role.",
+  },
+  {
     name: "Google Cybersecurity Certification",
     issuer: "Google · 2025",
     body: "This certification covered foundational cybersecurity concepts, including network security, cryptography, and incident response. It included hands-on labs simulating real-world scenarios, which helped me understand how to detect and respond to threats effectively. The skills gained are directly applicable to SOC operations and defensive security practices.",
@@ -84,16 +94,6 @@ const certifications = [
     issuer: "ArcX · 2026",
     body: "This certification focused on the fundamentals of threat intelligence, including data collection, analysis, and reporting. It provided insights into identifying and understanding cyber threats, as well as how to use threat intelligence to inform security strategies. The knowledge gained is valuable for roles in threat detection and incident response.",
     link: "/ArcXcertificate.pdf",
-  },
-  {
-    name: "CompTIA Security+",
-    issuer: "CompTIA ",
-    body: "Currently studying core security domains: network security, cryptography, identity and access management, risk management, and incident response. Building on the foundational knowledge from the Google Cybersecurity certification with a deeper focus on enterprise security architecture and compliance frameworks.",
-  },
-  {
-    name: "Level 1 SOC Analyst",
-    issuer: "TryHackMe",
-    body: "Developing practical SOC analyst skills through hands-on labs. Learning log analysis, SIEM tooling, alert triage, threat hunting, and incident response workflows. I am working through real-world scenarios to build the operational skills needed for a Level 1 SOC role.",
   },
 ];
 
