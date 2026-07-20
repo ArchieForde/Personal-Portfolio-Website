@@ -1,57 +1,52 @@
 import Section from "../Components/Section";
 import Reveal from "../Components/Reveal";
+import { useEffect } from "react";
 
 const projects = [
   {
-    category: "Offensive Security",
-    title: "[ Project Title — e.g. Custom Exploit Development ]",
-    body: "[ Describe the target, methodology, and impact. Include tools used and CVEs if applicable. ]",
-    tags: ["Python", "Burp Suite", "Networking"],
-    link: "#",
-  },
-  {
-    category: "AI Security",
-    title: "[ Project Title — e.g. Adversarial Attack on Image Classifier ]",
-    body: "[ Describe the model, attack vector, and defence mechanism tested. Include accuracy drop metrics. ]",
-    tags: ["PyTorch", "Adversarial ML", "Python"],
-    link: "#",
-  },
-  {
-    category: "Quantum-Safe Crypto",
-    title: "[ Project Title — e.g. Lattice-Based Key Exchange Implementation ]",
-    body: "[ Describe the algorithm, implementation language, and performance benchmarks. ]",
-    tags: ["C++", "Qiskit", "OpenSSL"],
-    link: "#",
-  },
-  {
-    category: "Research",
-    title: "[ Project Title — e.g. Post-Quantum Cryptography Survey ]",
-    body: "[ Summarise the research question, methodology, and your contribution or findings. ]",
-    tags: ["Research", "Writing", "NIST PQC"],
+    category: "Security Operations",
+    title: "Home Security Operations Lab",
+    body: "Built a home SOC lab using Wazuh SIEM, Kali Linux, and Metasploitable 2. Generated and investigated real security events to understand alerting, log analysis, and incident detection workflows.",
+    tags: ["Wazuh", "Kali Linux", "Metasploitable 2", "SIEM", "Log Analysis"],
     link: "#",
   },
   {
     category: "Tooling",
-    title: "[ Project Title — e.g. Custom Recon Automation Framework ]",
-    body: "[ What it does, who uses it, and your role in building it. Mention automation and scale. ]",
-    tags: ["OSS", "Python", "Automation"],
+    title: "Python Port Scanner",
+    body: "Developed a custom port scanner in Python using socket programming and TCP/IP fundamentals. Used it to identify open services and assess vulnerability exposure on test environments.",
+    tags: ["Python", "Sockets", "TCP/IP", "Vulnerability Assessment"],
     link: "#",
   },
   {
-    category: "Capture The Flag",
-    title: "[ Project Title — e.g. CTF Writeup / Competition ]",
-    body: "[ The challenge category, your approach, and the flag or key insight you uncovered. ]",
-    tags: ["CTF", "Forensics", "Crypto"],
+    category: "AI Security (Internship)",
+    title: "AI NLP Prototype — The Open Group",
+    body: "Internship project focused on data preprocessing, prompt engineering, and secure data handling. Presented findings and prototype results to senior leadership.",
+    tags: ["NLP", "Python", "Prompt Engineering", "Secure Data Handling"],
     link: "#",
   },
 ];
 
 export default function Projects() {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const hash = window.location.hash;
+      if (!hash) return;
+      const el = document.querySelector(hash);
+      if (!el) return;
+      const nav = document.querySelector("nav");
+      const offset = nav ? nav.getBoundingClientRect().height : 0;
+      const top = el.getBoundingClientRect().top + window.scrollY - offset - 16;
+      window.scrollTo({ top, behavior: "smooth" });
+    }, 120);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Section
+      id="projects"
       eyebrow="Projects"
       title="Selected work"
-      subtitle="A focus on cybersecurity, AI-powered defence, and quantum-safe security. Replace these placeholders with your real work."
+      subtitle="A selection of hands-on security and AI projects I've built to deepen my practical skills."
     >
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, i) => (

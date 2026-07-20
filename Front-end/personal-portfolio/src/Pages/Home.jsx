@@ -8,26 +8,26 @@ const focusAreas = [
   {
     tag: "Security",
     title: "Cybersecurity",
-    body: "Offensive and defensive security, threat modelling, and secure system design — the foundation of everything I do.",
+    body: "SOC analysis, threat detection, incident response, and defensive security. Where I'm building real, hands-on experience right now.",
     color: "text-quant",
   },
   {
-    tag: "AI Security",
+    tag: "AI Security (Exploring)",
     title: "AI-Powered Defence",
-    body: "Adversarial ML, model hardening, and AI-driven threat detection — where machine learning meets defence.",
+    body: "How AI changes both attack and defence. It is a genuine long-term interest I'm building toward.",
     color: "text-accent",
   },
   {
-    tag: "Quantum",
+    tag: "Quantum-Safe (Future focus)",
     title: "Quantum-Safe Security",
-    body: "Post-quantum cryptography, quantum key distribution, and quantum-resistant algorithms — the specialisation I'm building toward.",
+    body: "Post-quantum cryptography and how security adapts as quantum computing matures.",
     color: "text-accent-2",
   },
 ];
 
 const stats = [
-  { value: "MSc", label: "AI & ML (Quantum Spec.)" },
-  { value: "3+", label: "Years of programming" },
+  { value: "2:1", label: "BSc Computer Science (Software Eng.)" },
+  { value: "2", label: "Certifications completed" },
   { value: "∞", label: "Curiosity for hard problems" },
 ];
 
@@ -38,7 +38,7 @@ export default function Home() {
         <div className="grid w-full grid-cols-1 items-start gap-12 md:grid-cols-[1fr_auto]">
           <div>
             <Reveal className="mb-5">
-              <span className="chip font-mono">MSc Student · Open to Opportunities</span>
+              <span className="chip font-mono">Computer Science Graduate · Open to Cyber Security Opportunities</span>
             </Reveal>
 
             <SplitText
@@ -55,11 +55,11 @@ export default function Home() {
 
             <Reveal delay={200} className="mt-6 max-w-2xl">
               <p className="text-2xl font-medium text-text md:text-3xl">
-                Cybersecurity — <span className="gradient-text">specialising in AI &amp; Quantum Computing Security</span>
+                Cybersecurity · <span className="gradient-text">building toward SOC Analysis &amp; Defensive Security</span>
               </p>
               <p className="mt-4 text-lg text-muted">
-                Building secure systems at the intersection of offensive security,
-                AI-powered defence, and quantum-safe cryptography.
+                Computer Science graduate with a hands-on, self-directed approach to security.
+                I build things to understand how they break, and how to defend them.
               </p>
             </Reveal>
 
@@ -86,12 +86,38 @@ export default function Home() {
       </section>
 
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-6 sm:grid-cols-3">
-        {stats.map((s, i) => (
-          <Reveal key={s.label} delay={i * 120} className="card p-6">
-            <div className="text-3xl font-bold gradient-text">{s.value}</div>
-            <div className="mt-1 text-sm text-muted">{s.label}</div>
-          </Reveal>
-        ))}
+        {stats.map((s, i) => {
+          const isCert = s.label === "Certifications completed";
+          const isDegree = s.label.startsWith("BSc Computer Science");
+          const isLink = isCert || isDegree;
+          const to = isCert ? "/about#certifications" : isDegree ? "/about#education" : null;
+
+          if (isLink) {
+            return (
+              <Reveal key={s.label} delay={i * 120}>
+                <Link
+                  to={to}
+                  className="card block p-6 no-underline transition-transform hover:scale-[1.02]"
+                >
+                  <div className="text-3xl font-bold gradient-text">{s.value}</div>
+                  <div className="mt-1 text-sm text-muted">{s.label}</div>
+                </Link>
+              </Reveal>
+            );
+          }
+
+          return (
+            <Reveal key={s.label} delay={i * 120}>
+              <Link
+                to="/projects"
+                className="card block p-6 no-underline transition-transform hover:scale-[1.02]"
+              >
+                <div className="text-3xl font-bold gradient-text">{s.value}</div>
+                <div className="mt-1 text-sm text-muted">{s.label}</div>
+              </Link>
+            </Reveal>
+          );
+        })}
       </div>
 
       <Section
@@ -115,13 +141,13 @@ export default function Home() {
       <Section eyebrow="Now" title="Current trajectory">
         <Reveal className="card p-8">
           <p className="text-lg text-text">
-            Currently pursuing a Masters in Cybersecurity with a specialisation in AI &amp;
-            Quantum Computing Security. I'm focused on offensive security, AI-powered
-            defence, and quantum-safe cryptography — combining rigorous analysis with
-            cutting-edge tools to protect systems against tomorrow's threats.
+            Computer Science graduate focused on gaining real security experience in SOC
+            analysis, threat detection, and incident response. For the future, I'm interested
+            in how AI and ML reshapes both attack and defence, and how post-quantum cryptography
+            will change security as quantum computing matures.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
-            {["Python", "C++", "Wireshark", "Burp Suite", "Qiskit", "Linux"].map((t) => (
+            {["Python", "C++", "Wireshark", "Burp Suite", "Linux", "SIEM"].map((t) => (
               <span key={t} className="chip font-mono">
                 {t}
               </span>

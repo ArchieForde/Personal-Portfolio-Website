@@ -22,7 +22,7 @@ const contacts = [
   },
   {
     label: "Location",
-    sub: "Maastricht, Netherlands",
+    sub: "UK · Open to relocate",
     href: "#",
     glyph: "⌖",
   },
@@ -64,11 +64,11 @@ export default function Contact() {
 
       <Reveal delay={200} className="card mt-8 p-8">
         <p className="text-lg text-text">
-          I'm currently focused on my Masters in Cybersecurity with a specialisation in
-          AI and Quantum Computing Security. I'm keen to connect about
-          <span className="gradient-text"> offensive security, AI defence, or quantum-safe
-          crypto</span> roles, research, or collaborations. The fastest way to reach me is
-          email — I usually reply within a day.
+          I'm currently building toward a graduate role in cyber security, with a longer-term
+          interest in AI-driven defence and post-quantum cryptography. I'm keen to connect
+          about <span className="gradient-text">SOC analyst roles, security research, or
+          related opportunities</span>. The fastest way to reach me is email — I usually
+          reply within a day.
         </p>
       </Reveal>
     </Section>

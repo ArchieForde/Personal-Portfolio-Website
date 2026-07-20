@@ -12,7 +12,7 @@ export default function ProfilePhoto({
 
   return (
     <div className={`relative ${size} ${className}`}>
-      <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-accent via-accent-2 to-quant opacity-70 blur-[2px]" />
+      <div className="profile-ring absolute -inset-1 rounded-full bg-gradient-to-br from-accent via-accent-2 to-quant opacity-70 blur-[2px]" />
       <div className="relative h-full w-full overflow-hidden rounded-full border border-border bg-surface">
         {!errored && (
           <img

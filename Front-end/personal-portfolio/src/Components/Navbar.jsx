@@ -22,8 +22,9 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <Link to="/" className="group flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-accent to-accent-2 font-mono text-sm font-bold text-ink transition-transform group-hover:scale-105">
+        <Link to="/" className="nav-logo group relative flex items-center gap-2" onClick={() => setOpen(false)}>
+          <span className="relative grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-accent to-accent-2 font-mono text-sm font-bold text-ink transition-transform group-hover:scale-105">
+            <span className="logo-glow absolute inset-0 rounded-lg bg-gradient-to-br from-accent to-accent-2" />
             AF
           </span>
           <span className="font-mono text-sm font-semibold tracking-widest text-text">
