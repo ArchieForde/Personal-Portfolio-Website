@@ -1,7 +1,7 @@
 import Section from "../Components/Section";
 import Reveal from "../Components/Reveal";
 import ProfilePhoto from "../Components/ProfilePhoto";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function CredentialThumbnail({ src, alt }) {
   const isPdf = src.toLowerCase().endsWith(".pdf");
@@ -20,60 +20,21 @@ function CredentialThumbnail({ src, alt }) {
   );
 }
 
-function CredentialCard({ image, name }) {
-  const [open, setOpen] = useState(false);
-
+function SkillBar({ name, level }) {
   return (
-    <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className="credential-preview mt-5 w-full overflow-hidden rounded-xl border border-border bg-surface text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_rgba(79,157,255,0.35)]"
-      >
-        <div className="flex items-center justify-between border-b border-border bg-surface-2 px-4 py-2">
-          <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-accent" />
-            <span className="font-mono text-xs text-muted">Credential</span>
-          </div>
-          <span className="font-mono text-[10px] uppercase tracking-widest text-accent">Click to view</span>
-        </div>
-        <CredentialThumbnail src={image} alt={`${name} credential`} />
-      </button>
-      {open && <CredentialModal src={image} alt={`${name} credential`} onClose={() => setOpen(false)} />}
-    </>
-  );
-}
-
-function CredentialModal({ src, alt, onClose }) {
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === "Escape") onClose();
-    };
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
-  }, [onClose]);
-
-  return (
-    <div className="credential-modal" onClick={onClose}>
-      <div className="credential-modal-backdrop" />
-      <div className="credential-modal-content" onClick={(e) => e.stopPropagation()}>
-        <div className="flex items-center justify-between border-b border-border bg-surface-2 px-5 py-3">
-          <span className="font-mono text-xs uppercase tracking-widest text-accent">Credential Preview</span>
-          <button
-            onClick={onClose}
-            className="flex h-8 w-8 items-center justify-center rounded-md border border-border text-muted transition-colors hover:text-text hover:border-accent"
-          >
-            ✕
-          </button>
-        </div>
-        <div className="p-4">
-          {src.toLowerCase().endsWith(".pdf") ? (
-            <embed src={src} type="application/pdf" className="w-full rounded-lg" style={{ height: "65vh" }} />
-          ) : (
-            <img src={src} alt={alt} className="max-h-[65vh] w-full rounded-lg object-contain" />
-          )}
-        </div>
+    <div className="flex items-center gap-3">
+      <span className="w-20 shrink-0 font-mono text-sm text-text">{name}</span>
+      <div className="flex flex-1 gap-1">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <div
+            key={i}
+            className={`h-1.5 flex-1 rounded-full transition-colors duration-300 ${
+              i < level ? "bg-gradient-to-r from-accent to-accent-2" : "bg-border"
+          }`}
+          />
+        ))}
       </div>
+      <span className="w-8 text-right font-mono text-xs text-muted">{level}/5</span>
     </div>
   );
 }
@@ -93,7 +54,13 @@ const skillGroups = [
   },
   {
     title: "Languages",
-    items: ["Python", "C++", "SQL", "C#", "Bash"],
+    items: [
+      { name: "Python", level: 5 },
+      { name: "C#", level: 4 },
+      { name: "Bash", level: 4 },
+      { name: "SQL", level: 3 },
+      { name: "C++", level: 2 },
+    ],
   },
   {
     title: "AI Security (Exploring)",
@@ -110,20 +77,31 @@ const certifications = [
     name: "Google Cybersecurity Certification",
     issuer: "Google · 2025",
     body: "This certification covered foundational cybersecurity concepts, including network security, cryptography, and incident response. It included hands-on labs simulating real-world scenarios, which helped me understand how to detect and respond to threats effectively. The skills gained are directly applicable to SOC operations and defensive security practices.",
-    image: "/Google Cyber cert.pdf",
+    link: "/Google Cyber cert.pdf",
   },
   {
     name: "Foundation Level Threat Intelligence Analyst",
     issuer: "ArcX · 2026",
     body: "This certification focused on the fundamentals of threat intelligence, including data collection, analysis, and reporting. It provided insights into identifying and understanding cyber threats, as well as how to use threat intelligence to inform security strategies. The knowledge gained is valuable for roles in threat detection and incident response.",
-    image: "/ArcXcertificate.pdf",
+    link: "/ArcXcertificate.pdf",
+  },
+  {
+    name: "CompTIA Security+",
+    issuer: "CompTIA · In Progress",
+    body: "Currently studying core security domains: network security, cryptography, identity and access management, risk management, and incident response. Building on the foundational knowledge from the Google Cybersecurity certification with a deeper focus on enterprise security architecture and compliance frameworks.",
+  },
+  {
+    name: "Level 1 SOC Analyst",
+    issuer: "HackTheBox · In Progress",
+    body: "Developing practical SOC analyst skills through hands-on labs. Learning log analysis, SIEM tooling, alert triage, threat hunting, and incident response workflows. I am working through real-world scenarios to build the operational skills needed for a Level 1 SOC role.",
   },
 ];
 
 const timeline = [
   { year: "2022", event: "Started BSc Computer Science with Software Engineering at University of Hull" },
-  { year: "2026", event: "Graduated 2:1 now focusing on security, systems, and defence" },
-  { year: "2026", event: "Completed 2 certifications; built home SOC lab and security tools" },
+  { year: "2023", event: "Completed my internship at The Open Group" },
+  { year: "2025 - 2026", event: "Completed 2 certifications and continuing studies; built home SOC lab and security tools" },
+  { year: "2026", event: "Graduated with 2:1; focusing on cybersecurity roles" },
   { year: "Now", event: "Building toward graduate cyber security roles such as SOC Analyst, threat detection, IR" },
 ];
 
@@ -186,10 +164,14 @@ export default function About() {
               <h3 className="text-sm font-semibold uppercase tracking-wider text-muted">
                 {g.title}
               </h3>
-              <ul className="mt-4 space-y-2">
+              <ul className="mt-4 space-y-3">
                 {g.items.map((it) => (
-                  <li key={it} className="font-mono text-sm text-text">
-                    {it}
+                  <li key={typeof it === "string" ? it : it.name}>
+                    {typeof it === "string" ? (
+                      <span className="font-mono text-sm text-text">{it}</span>
+                    ) : (
+                      <SkillBar name={it.name} level={it.level} />
+                    )}
                   </li>
                 ))}
               </ul>
@@ -202,13 +184,28 @@ export default function About() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {certifications.map((c, i) => (
             <Reveal key={c.name} delay={i * 120} className="card flex flex-col p-7">
-              <span className="font-mono text-xs uppercase tracking-widest text-accent">
-                {c.issuer}
-              </span>
+              <div className="flex items-center justify-between gap-3">
+                <span className="font-mono text-xs uppercase tracking-widest text-accent">
+                  {c.issuer}
+                </span>
+                {!c.link && (
+                  <span className="rounded-full border border-accent/40 bg-accent/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-accent">
+                    In Progress
+                  </span>
+                )}
+              </div>
               <h3 className="mt-2 text-xl font-semibold">{c.name}</h3>
               <p className="mt-3 text-muted">{c.body}</p>
-              {c.image && (
-                <CredentialCard image={c.image} name={c.name} />
+              {c.link && (
+                <a
+                  href={c.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="credential-preview mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-surface px-4 py-3 font-medium text-text transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[0_12px_40px_-12px_rgba(79,157,255,0.35)]"
+                >
+                  View Credential
+                  <span className="text-sm">↗</span>
+                </a>
               )}
             </Reveal>
           ))}

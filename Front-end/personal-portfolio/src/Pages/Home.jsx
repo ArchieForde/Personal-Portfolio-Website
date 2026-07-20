@@ -122,7 +122,7 @@ export default function Home() {
 
       <Section
         eyebrow="Focus"
-        title="Where I operate"
+        title="Where I am building expertise"
         subtitle="Three converging interests that define my work and where I'm heading next."
       >
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">

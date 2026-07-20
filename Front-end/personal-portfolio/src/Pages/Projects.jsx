@@ -4,25 +4,29 @@ import { useEffect } from "react";
 
 const projects = [
   {
-    category: "Security Operations",
-    title: "Home Security Operations Lab",
-    body: "Built a home SOC lab using Wazuh SIEM, Kali Linux, and Metasploitable 2. Generated and investigated real security events to understand alerting, log analysis, and incident detection workflows.",
-    tags: ["Wazuh", "Kali Linux", "Metasploitable 2", "SIEM", "Log Analysis"],
-    link: "#",
-  },
-  {
     category: "Tooling",
     title: "Python Port Scanner",
     body: "Developed a custom port scanner in Python using socket programming and TCP/IP fundamentals. Used it to identify open services and assess vulnerability exposure on test environments.",
     tags: ["Python", "Sockets", "TCP/IP", "Vulnerability Assessment"],
-    link: "#",
+    link: "https://github.com/ArchieForde/Port_Scanner",
   },
   {
-    category: "AI Security (Internship)",
+    category: "In Progress",
+    title: "Log-Based Intrusion Detection: Rule-Based vs. Machine Learning Anomaly Detection",
+    body: "Hands-on, code-based project — writing Python to parse real log data and build both a rule-based detector and an ML-based one using Isolation Forest. Comparing detection results between the two approaches to understand the trade-offs between signature-based and anomaly-based detection.",
+    tags: ["IDS/IPS", "Snort", "Machine Learning", "Python", "Network Security"],
+  },
+  {
+    category: "Security Operations · Ongoing",
+    title: "Home Security Operations Lab",
+    body: "Built a home SOC lab using Wazuh SIEM, Kali Linux, and Metasploitable 2. Generated and investigated real security events to understand alerting, log analysis, and incident detection workflows.",
+    tags: ["Wazuh", "Kali Linux", "Metasploitable 2", "SIEM", "Log Analysis"],
+  },
+  {
+    category: "AI Security · Internship",
     title: "AI NLP Prototype — The Open Group",
     body: "Internship project focused on data preprocessing, prompt engineering, and secure data handling. Presented findings and prototype results to senior leadership.",
     tags: ["NLP", "Python", "Prompt Engineering", "Secure Data Handling"],
-    link: "#",
   },
 ];
 
@@ -63,12 +67,17 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-            <a
-              href={p.link}
-              className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
-            >
-              [ View → ]
-            </a>
+            {p.link && (
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="credential-preview mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-surface px-4 py-3 font-medium text-text transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[0_12px_40px_-12px_rgba(79,157,255,0.35)]"
+              >
+                View Project
+                <span className="text-sm">↗</span>
+              </a>
+            )}
           </Reveal>
         ))}
       </div>

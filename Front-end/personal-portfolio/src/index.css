@@ -197,6 +197,11 @@ a {
   transform: translateY(0) scale(1);
 }
 
+/* Skill rating bars */
+.skill-bar-fill {
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 /* Credential preview card */
 .credential-preview {
   border-left: 3px solid var(--color-accent);
@@ -235,13 +240,17 @@ a {
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   box-shadow: 0 25px 80px -20px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
   animation: modalIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .credential-modal-content embed {
+  flex: 1;
   width: 100%;
-  height: 70vh;
   border: none;
   background: var(--color-ink-soft);
+  display: block;
+  min-height: 0;
 }
 @keyframes fadeIn {
   from { opacity: 0; }
