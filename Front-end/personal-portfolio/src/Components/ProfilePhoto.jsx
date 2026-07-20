@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function ProfilePhoto({
-  src = "/profile.jpeg",
+  src,
   alt = "Archie Forde",
   initials = "AF",
   className = "",
@@ -9,6 +9,7 @@ export default function ProfilePhoto({
 }) {
   const [loaded, setLoaded] = useState(false);
   const [errored, setErrored] = useState(false);
+  const resolvedSrc = src || `${import.meta.env.BASE_URL}profile.jpeg`;
 
   return (
     <div className={`relative ${size} ${className}`}>
@@ -16,7 +17,7 @@ export default function ProfilePhoto({
       <div className="relative h-full w-full overflow-hidden rounded-full border border-border bg-surface">
         {!errored && (
           <img
-            src={src}
+            src={resolvedSrc}
             alt={alt}
             onLoad={() => setLoaded(true)}
             onError={() => setErrored(true)}

@@ -87,12 +87,12 @@ const certifications = [
   },
   {
     name: "CompTIA Security+",
-    issuer: "CompTIA · In Progress",
+    issuer: "CompTIA ",
     body: "Currently studying core security domains: network security, cryptography, identity and access management, risk management, and incident response. Building on the foundational knowledge from the Google Cybersecurity certification with a deeper focus on enterprise security architecture and compliance frameworks.",
   },
   {
     name: "Level 1 SOC Analyst",
-    issuer: "HackTheBox · In Progress",
+    issuer: "TryHackMe",
     body: "Developing practical SOC analyst skills through hands-on labs. Learning log analysis, SIEM tooling, alert triage, threat hunting, and incident response workflows. I am working through real-world scenarios to build the operational skills needed for a Level 1 SOC role.",
   },
 ];
