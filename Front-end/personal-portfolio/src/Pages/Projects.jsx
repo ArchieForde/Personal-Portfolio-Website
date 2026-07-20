@@ -3,45 +3,45 @@ import Reveal from "../Components/Reveal";
 
 const projects = [
   {
-    category: "Quantum Computing",
-    title: "[ Project Title — e.g. Variational Quantum Eigensolver ]",
-    body: "[ 1–2 sentences on the problem, the quantum approach, and results. Link the repo/paper. ]",
-    tags: ["Qiskit", "QML", "Python"],
+    category: "Offensive Security",
+    title: "[ Project Title — e.g. Custom Exploit Development ]",
+    body: "[ Describe the target, methodology, and impact. Include tools used and CVEs if applicable. ]",
+    tags: ["Python", "Burp Suite", "Networking"],
     link: "#",
   },
   {
-    category: "Quant Finance",
-    title: "[ Project Title — e.g. Options Pricing with Monte Carlo ]",
-    body: "[ Describe the model, data, and what you learned or improved. Add metrics. ]",
-    tags: ["C++", "Stochastic", "Pandas"],
+    category: "AI Security",
+    title: "[ Project Title — e.g. Adversarial Attack on Image Classifier ]",
+    body: "[ Describe the model, attack vector, and defence mechanism tested. Include accuracy drop metrics. ]",
+    tags: ["PyTorch", "Adversarial ML", "Python"],
     link: "#",
   },
   {
-    category: "Machine Learning",
-    title: "[ Project Title — e.g. Deep Learning for Time Series ]",
-    body: "[ Describe the architecture, dataset, and performance. Mention frameworks. ]",
-    tags: ["PyTorch", "NLP", "NumPy"],
+    category: "Quantum-Safe Crypto",
+    title: "[ Project Title — e.g. Lattice-Based Key Exchange Implementation ]",
+    body: "[ Describe the algorithm, implementation language, and performance benchmarks. ]",
+    tags: ["C++", "Qiskit", "OpenSSL"],
     link: "#",
   },
   {
     category: "Research",
-    title: "[ Project Title — e.g. Thesis / Literature Review ]",
-    body: "[ Summarise the research question and your contribution or findings. ]",
-    tags: ["Research", "Writing"],
+    title: "[ Project Title — e.g. Post-Quantum Cryptography Survey ]",
+    body: "[ Summarise the research question, methodology, and your contribution or findings. ]",
+    tags: ["Research", "Writing", "NIST PQC"],
     link: "#",
   },
   {
-    category: "Open Source",
-    title: "[ Project Title — e.g. Library / Tooling ]",
-    body: "[ What it does, who uses it, and your role in building it. ]",
-    tags: ["OSS", "Rust"],
+    category: "Tooling",
+    title: "[ Project Title — e.g. Custom Recon Automation Framework ]",
+    body: "[ What it does, who uses it, and your role in building it. Mention automation and scale. ]",
+    tags: ["OSS", "Python", "Automation"],
     link: "#",
   },
   {
-    category: "Competition",
-    title: "[ Project Title — e.g. Kaggle / Quant Challenge ]",
-    body: "[ The challenge, your approach, and your placement or key insight. ]",
-    tags: ["Kaggle", "Modelling"],
+    category: "Capture The Flag",
+    title: "[ Project Title — e.g. CTF Writeup / Competition ]",
+    body: "[ The challenge category, your approach, and the flag or key insight you uncovered. ]",
+    tags: ["CTF", "Forensics", "Crypto"],
     link: "#",
   },
 ];
@@ -51,7 +51,7 @@ export default function Projects() {
     <Section
       eyebrow="Projects"
       title="Selected work"
-      subtitle="A focus on machine learning, quantitative finance, and quantum computing. Replace these placeholders with your real work."
+      subtitle="A focus on cybersecurity, AI-powered defence, and quantum-safe security. Replace these placeholders with your real work."
     >
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, i) => (

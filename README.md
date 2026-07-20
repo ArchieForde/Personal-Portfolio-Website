@@ -1,6 +1,6 @@
 # Personal Portfolio — Archie Forde
 
-A professional portfolio site for quantitative finance, AI/ML, and quantum computing roles.
+A professional portfolio site for cybersecurity, AI security, and quantum-safe cryptography roles.
 
 ## Stack
 - React 19 + Vite 7
@@ -17,8 +17,12 @@ npm run dev
 
 ## Structure
 - `src/Pages/` — Home, About, Projects, Contact
-- `src/Components/` — Navbar, Footer, Section, Reveal, SplitText
+- `src/Components/` — Navbar, Footer, Section, Reveal, SplitText, ProfilePhoto, useScrolled
 
 ## Fill in placeholders
 Search the codebase for `[ ... ]` to replace placeholder content (name details, links,
 projects, education, contact info) with your own.
+
+## Profile photo
+Drop a square headshot at `Front-end/personal-portfolio/public/profile.jpg`. Until then,
+the site shows a styled initials placeholder.

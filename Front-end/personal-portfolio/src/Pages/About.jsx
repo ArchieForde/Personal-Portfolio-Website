@@ -1,15 +1,16 @@
 import Section from "../Components/Section";
 import Reveal from "../Components/Reveal";
+import ProfilePhoto from "../Components/ProfilePhoto";
 
 const education = [
   {
     title: "MSc Artificial Intelligence & Machine Learning",
-    meta: "[ UNIVERSITY NAME ] · [ 2025–2027 ]",
+    meta: " Maastricht University · 2027–2029 ",
     body: "Specialisation in Quantum Computing. [ Add core modules, thesis topic, and any distinctions. ]",
   },
   {
-    title: "BSc / Previous Degree",
-    meta: "[ UNIVERSITY NAME ] · [ YEAR–YEAR ]",
+    title: "BSc Computer Science with Software Engineering",
+    meta: "University of Hull · 2022-2026",
     body: "[ Add your prior degree, relevant coursework in maths/stats/CS, and achievements. ]",
   },
 ];
@@ -17,43 +18,52 @@ const education = [
 const skillGroups = [
   {
     title: "Languages",
-    items: ["Python", "C++", "SQL", "Rust", "JavaScript"],
+    items: ["Python", "C++", "SQL", "C#", "Bash"],
   },
   {
-    title: "ML & Data",
-    items: ["PyTorch", "scikit-learn", "Pandas", "NumPy", "Statsmodels"],
+    title: "Security",
+    items: ["Pen Testing", "Threat Modelling", "Cryptography", "Reverse Engineering", "Network Defence"],
   },
   {
-    title: "Quant & Finance",
-    items: ["Time Series", "Stochastic Calc", "Optimisation", "Risk", "Pricing"],
+    title: "AI Security",
+    items: ["Adversarial ML", "Model Hardening", "Anomaly Detection", "PyTorch", "scikit-learn"],
   },
   {
     title: "Quantum",
-    items: ["Qiskit", "Cirq", "QML", "Variational Algs", "Linear Algebra"],
+    items: ["PQC", "QKD", "Qiskit", "Lattice-based Crypto", "Linear Algebra"],
   },
 ];
 
 const timeline = [
-  { year: "[ YEAR ]", event: "[ Milestone — e.g. started MSc in AI & ML ]" },
-  { year: "[ YEAR ]", event: "[ Milestone — e.g. first quant internship ]" },
-  { year: "[ YEAR ]", event: "[ Milestone — e.g. quantum computing research ]" },
-  { year: "Now", event: "Building toward quant / quantum computing roles" },
+  { year: "[ YEAR ]", event: "[ Milestone — e.g. started BSc Computer Science ]" },
+  { year: "[ YEAR ]", event: "[ Milestone — e.g. first cybersecurity certification / internship ]" },
+  { year: "[ YEAR ]", event: "[ Milestone — e.g. started MSc in Cybersecurity ]" },
+  { year: "Now", event: "Building toward cybersecurity / quantum-safe security roles" },
 ];
 
 export default function About() {
   return (
     <>
       <Section eyebrow="About" title="A bit about me">
-        <Reveal className="max-w-3xl text-lg text-muted">
-          <p>
-            [ BIO PARAGRAPH 1: who you are, your background, and the thread that connects
-            maths, programming and finance. ]
-          </p>
-          <p className="mt-4">
-            [ BIO PARAGRAPH 2: your ambition — working in quantitative finance now, and
-            moving into quantum computing further down the line. Mention the masters. ]
-          </p>
-        </Reveal>
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[auto_1fr]">
+          <Reveal className="flex justify-center md:justify-start">
+            <ProfilePhoto size="w-40 h-40 md:w-52 md:h-52" />
+          </Reveal>
+          <Reveal className="max-w-3xl text-lg text-muted">
+            <p>
+              I'm Archie Forde, a Masters student in Cybersecurity with a specialisation in
+              AI and Quantum Computing Security. My background sits at the intersection of
+              mathematics, programming and security — the thread that draws me toward
+              defending systems where rigorous analysis meets real-world threats.
+            </p>
+            <p className="mt-4">
+              My immediate goal is to work in cybersecurity, applying penetration testing,
+              threat modelling and AI-driven defence to protect critical infrastructure.
+              Further down the line I want to specialise in quantum-safe security — and my
+              Masters is the bridge between where I am now and that future.
+            </p>
+          </Reveal>
+        </div>
       </Section>
 
       <Section eyebrow="Education" title="Academic background">

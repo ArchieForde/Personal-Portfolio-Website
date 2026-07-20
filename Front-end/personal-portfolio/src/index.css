@@ -98,3 +98,9 @@ a {
   background: var(--color-surface);
   color: var(--color-muted);
 }
+
+/* Scroll progress bar — updated from JS via --progress (0..1) */
+.progress-bar {
+  transform: scaleX(var(--progress, 0));
+  transition: transform 0.1s linear;
+}
