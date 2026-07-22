@@ -1,13 +1,32 @@
 # Personal Portfolio — Archie Forde
 
-A professional portfolio site for cybersecurity, AI security, and hands-on security projects.
+A cybersecurity-focused portfolio website showcasing my journey as a Computer Science graduate building toward SOC analyst and defensive security roles.
 
-## Stack
+## About
+
+This portfolio highlights my practical security experience, technical projects, and certifications. It's designed to give recruiters and security professionals a clear view of my skills, learning path, and the hands-on work I've done in cybersecurity.
+
+## What's Inside
+
+- **Home** — Quick snapshot of my background, focus areas, and current trajectory
+- **About** — Academic background, technical toolkit, certifications, and career timeline
+- **Projects** — Hands-on security and AI projects including SOC labs, tooling, and in-progress work
+- **Contact** — Links to my email, LinkedIn, GitHub, and TryHackMe profiles
+
+## Key Focus Areas
+
+- Cybersecurity — SOC analysis, threat detection, incident response
+- AI security — Exploring how machine learning intersects with defence
+- Quantum-safe security — Future focus on post-quantum cryptography
+
+## Tech Stack
+
 - React 19 + Vite 7
 - Tailwind CSS v4
-- GSAP (`SplitText`, `ScrollTrigger`) for hero text & scroll animations
+- GSAP for scroll animations
+- React Router for navigation
 
-## Run locally
+## Running Locally
 
 ```bash
 cd Front-end/personal-portfolio
@@ -15,24 +34,19 @@ npm install
 npm run dev
 ```
 
-## Deploy to GitHub Pages
+The dev server starts at `http://localhost:5173`.
+
+## Deployment
+
+This site is deployed to GitHub Pages. To update the live site:
 
 ```bash
 cd Front-end/personal-portfolio
 npm run deploy
 ```
 
-This builds the site and pushes the `dist/` contents to the `gh-pages` branch.
+This builds the production bundle and pushes it to the `gh-pages` branch.
 
-## Live site
+## Live Site
 
-Hosted on GitHub Pages at:
 `https://archieforde.github.io/Personal-Portfolio-Website/`
-
-## Structure
-- `src/Pages/` — Home, About, Projects, Contact
-- `src/Components/` — Navbar, Footer, Section, Reveal, SplitText, ProfilePhoto, useScrolled
-
-## Content placeholders
-- Profile photo → `Front-end/personal-portfolio/public/profile.jpeg`
-- Education, projects, certifications, and contact links are filled in `src/Pages/About.jsx`, `src/Pages/Projects.jsx`, and `src/Pages/Contact.jsx`
