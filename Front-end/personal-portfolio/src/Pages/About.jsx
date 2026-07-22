@@ -87,13 +87,13 @@ const certifications = [
     name: "Google Cybersecurity Certification",
     issuer: "Google · 2025",
     body: "This certification covered foundational cybersecurity concepts, including network security, cryptography, and incident response. It included hands-on labs simulating real-world scenarios, which helped me understand how to detect and respond to threats effectively. The skills gained are directly applicable to SOC operations and defensive security practices.",
-    link: "/Google Cyber cert.pdf",
+    link: "#",
   },
   {
     name: "Foundation Level Threat Intelligence Analyst",
     issuer: "ArcX · 2026",
     body: "This certification focused on the fundamentals of threat intelligence, including data collection, analysis, and reporting. It provided insights into identifying and understanding cyber threats, as well as how to use threat intelligence to inform security strategies. The knowledge gained is valuable for roles in threat detection and incident response.",
-    link: "/ArcXcertificate.pdf",
+    link: "#",
   },
 ];
 
@@ -122,7 +122,7 @@ export default function About() {
 
   return (
     <>
-      <Section eyebrow="About" title="A bit about me">
+      <Section eyebrow="About" title="About me">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[auto_1fr]">
           <Reveal className="flex justify-center md:justify-start">
             <ProfilePhoto size="w-40 h-40 md:w-52 md:h-52" />
@@ -196,7 +196,7 @@ export default function About() {
               </div>
               <h3 className="mt-2 text-xl font-semibold">{c.name}</h3>
               <p className="mt-3 text-muted">{c.body}</p>
-              {c.link && (
+              {c.link && c.link !== "#" && (
                 <a
                   href={c.link}
                   target="_blank"
