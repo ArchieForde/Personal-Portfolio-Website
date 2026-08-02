@@ -9,20 +9,20 @@ const focusAreas = [
     tag: "Security",
     title: "Cybersecurity",
     body: "SOC analysis, threat detection, incident response, and defensive security. Where I'm building real, hands-on experience right now.",
-    color: "text-quant",
-  },
-  {
-    tag: "AI Security (Exploring)",
-    title: "AI-Powered Defence",
-    body: "How AI changes both attack and defence. It is a genuine long-term interest I'm building toward.",
     color: "text-accent",
   },
   {
-    tag: "Quantum-Safe (Future focus)",
-    title: "Quantum-Safe Security",
-    body: "Post-quantum cryptography and how security adapts as quantum computing matures.",
-    color: "text-accent-2",
+    tag: "Consultancy (Exploring)",
+    title: "Cyber Security Consulting",
+    body: "Helping organisations assess risk, audit security posture, and build strategies that align technical defence with business objectives.",
+    color: "text-accent",
   },
+  {
+    tag: "AI Security (Exploring)",
+    title: "AI Cyber Security",
+    body: "How AI changes both attack and defence. It is a genuine long-term interest I'm building toward.",
+    color: "text-accent",
+  }
 ];
 
 const stats = [
@@ -55,7 +55,7 @@ export default function Home() {
 
             <Reveal delay={200} className="mt-6 max-w-2xl">
               <p className="text-2xl font-medium text-text md:text-3xl">
-                Cybersecurity · <span className="gradient-text">building toward SOC Analysis &amp; Defensive Security</span>
+                Cybersecurity · <span className="gradient-text">building toward Defensive Security, Offensive Security &amp; Consultancy</span>
               </p>
               <p className="mt-4 text-lg text-muted">
                 Computer Science graduate with a hands-on, self-directed approach to security.
@@ -141,13 +141,13 @@ export default function Home() {
       <Section eyebrow="Now" title="Current trajectory">
         <Reveal className="card p-8">
           <p className="text-lg text-text">
-            Computer Science graduate focused on gaining real security experience in SOC
-            analysis, threat detection, and incident response. For the future, I'm interested
-            in how AI and ML reshapes both attack and defence, and how post-quantum cryptography
-            will change security as quantum computing matures.
+            Computer Science graduate focused on gaining real security experience in Defensive Security, Offensive Security, and Cyber Security Consultancy.
+            I'm interested in SOC analysis, Threat Detection and Incident Response. I am also interested in Cyber Security Consulting, helping organisations assess risk, audit their
+            security posture, and build strategies that align technical defence with business
+            objectives.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
-            {["Python", "C++", "Wireshark", "Burp Suite", "Linux", "SIEM"].map((t) => (
+            {["Python", "Linux", "SIEM", "GRC", "Cyber Essentials"].map((t) => (
               <span key={t} className="chip font-mono">
                 {t}
               </span>

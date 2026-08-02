@@ -17,7 +17,7 @@ This portfolio highlights my practical security experience, technical projects, 
 
 - Cybersecurity — SOC analysis, threat detection, incident response
 - AI security — Exploring how machine learning intersects with defence
-- Quantum-safe security — Future focus on post-quantum cryptography
+- Cyber security consulting — Helping organisations assess risk and audit their security posture
 
 ## Tech Stack
 

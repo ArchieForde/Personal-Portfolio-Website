@@ -11,12 +11,6 @@ const projects = [
     link: "https://github.com/ArchieForde/Port_Scanner",
   },
   {
-    category: "In Progress",
-    title: "Log-Based Intrusion Detection: Rule-Based vs. Machine Learning Anomaly Detection",
-    body: "Hands-on, code-based project — writing Python to parse real log data and build both a rule-based detector and an ML-based one using Isolation Forest. Comparing detection results between the two approaches to understand the trade-offs between signature-based and anomaly-based detection.",
-    tags: ["IDS/IPS", "Snort", "Machine Learning", "Python", "Network Security"],
-  },
-  {
     category: "Security Operations · Ongoing",
     title: "Home Security Operations Lab",
     body: "Built a home SOC lab using Wazuh SIEM, Kali Linux, and Metasploitable 2. Generated and investigated real security events to understand alerting, log analysis, and incident detection workflows.",
@@ -55,7 +49,7 @@ export default function Projects() {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, i) => (
           <Reveal key={p.title} delay={(i % 3) * 100} className="card flex flex-col p-7">
-            <span className="font-mono text-xs uppercase tracking-widest text-quant">
+            <span className="font-mono text-xs uppercase tracking-widest text-accent">
               {p.category}
             </span>
             <h3 className="mt-3 text-lg font-semibold">{p.title}</h3>

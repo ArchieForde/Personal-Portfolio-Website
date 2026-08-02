@@ -60,7 +60,7 @@ export default function Contact() {
     <Section
       eyebrow="Contact"
       title="Let's talk"
-      subtitle="Open to cybersecurity, AI security, and quantum-safe security roles. Reach out below."
+      subtitle="Open to cybersecurity and cyber security consulting roles. Reach out below."
     >
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {contacts.filter((c) => c.label !== "Location").map((c, i) => {
@@ -110,9 +110,9 @@ export default function Contact() {
 
       <Reveal delay={200} className="card mt-8 p-8">
         <p className="text-lg text-text">
-          I'm currently building toward a graduate role in cyber security, with a longer-term
-          interest in AI-driven defence and post-quantum cryptography. I'm keen to connect
-          about <span className="gradient-text">SOC analyst roles, security research, or
+          I'm currently building toward a graduate role in cyber security, with a long-term
+          interest in cyber security consulting. I'm keen to connect
+          about <span className="gradient-text">SOC analyst roles, security consulting, or
           related opportunities</span>. The fastest way to reach me is email · I usually
           reply within a day.
         </p>

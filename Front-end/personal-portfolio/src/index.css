@@ -10,7 +10,6 @@
   --color-text: #e6ebf5;
   --color-accent: #4f9dff;
   --color-accent-2: #7c5cff;
-  --color-quant: #25d0a8;
   --font-sans: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
@@ -179,7 +178,7 @@ a {
 }
 .footer-border {
   height: 1px;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2), var(--color-quant), var(--color-accent));
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2), var(--color-accent));
   background-size: 300% 100%;
   animation: footerShimmer 8s ease infinite;
 }

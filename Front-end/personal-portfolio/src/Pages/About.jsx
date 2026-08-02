@@ -56,19 +56,18 @@ const skillGroups = [
     title: "Languages",
     items: [
       { name: "Python", level: 4 },
-      { name: "C#", level: 4 },
       { name: "Bash", level: 4 },
+      { name: "C#", level: 3 },
       { name: "SQL", level: 3 },
-      { name: "C++", level: 2 },
     ],
+  },
+  {
+    title: "Consultancy (Exploring)",
+    items: ["Risk Assessment", "Security Auditing", "Compliance", "Stakeholder Communication", "Security Strategy"],
   },
   {
     title: "AI Security (Exploring)",
     items: ["Adversarial ML", "Model Hardening", "Anomaly Detection", "Prompt Engineering", "Secure Data Handling"],
-  },
-  {
-    title: "Quantum (Future focus)",
-    items: ["PQC", "QKD", "Qiskit", "Lattice-based Crypto", "Linear Algebra"],
   },
 ];
 
@@ -79,7 +78,7 @@ const certifications = [
     body: "Currently studying core security domains: network security, cryptography, identity and access management, risk management, and incident response. Building on the foundational knowledge from the Google Cybersecurity certification with a deeper focus on enterprise security architecture and compliance frameworks.",
   },
   {
-    name: "Level 1 SOC Analyst",
+    name: "Level 1 SOC Analyst · SAL1 Certification",
     issuer: "TryHackMe",
     body: "Developing practical SOC analyst skills through hands-on labs. Learning log analysis, SIEM tooling, alert triage, threat hunting, and incident response workflows. I am working through real-world scenarios to build the operational skills needed for a Level 1 SOC role.",
   },
@@ -102,7 +101,7 @@ const timeline = [
   { year: "2023", event: "Completed my internship at The Open Group" },
   { year: "2025 - 2026", event: "Completed 2 certifications and continuing studies; built home SOC lab and security tools" },
   { year: "2026", event: "Graduated with 2:1; focusing on cybersecurity roles" },
-  { year: "Now", event: "Building toward graduate cyber security roles such as SOC Analyst, threat detection, IR" },
+  { year: "Now", event: "Building toward graduate cyber security roles such as SOC Analyst, threat detection, IR or Consulting" },
 ];
 
 export default function About() {
@@ -129,17 +128,16 @@ export default function About() {
           </Reveal>
           <Reveal className="max-w-3xl text-lg text-muted">
             <p>
-              I'm Archie Forde, a Computer Science graduate with a focused interest in cyber
+              I'm Archie Forde, a Computer Science graduate with an interest in cyber
               security and risk management. I learn through building with examples such as setting up my own lab
               environments, writing tools from scratch, and investigating how real attacks
               and defences actually work, rather than just studying the theory.
             </p>
             <p className="mt-4">
               My immediate goal is a graduate role in cyber security such as SOC analysis, threat
-              detection, and incident response. Longer-term, I'm interested in
-              where the field is heading: how AI is reshaping both attack and defence, and
-              how post-quantum cryptography will change security as quantum computing
-              matures.
+              detection, or incident response. I'm also interested in cyber security consulting, helping
+              organisations assess risk, audit their security posture, and build strategies that align
+              technical defence with business objectives.
             </p>
           </Reveal>
         </div>

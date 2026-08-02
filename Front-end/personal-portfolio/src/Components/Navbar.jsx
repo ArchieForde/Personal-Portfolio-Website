@@ -91,7 +91,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <span className="progress-bar absolute bottom-0 left-0 h-[2px] w-full origin-left bg-gradient-to-r from-accent via-accent-2 to-quant" />
+      <span className="progress-bar absolute bottom-0 left-0 h-[2px] w-full origin-left bg-gradient-to-r from-accent via-accent-2 to-accent" />
     </nav>
   );
 }
