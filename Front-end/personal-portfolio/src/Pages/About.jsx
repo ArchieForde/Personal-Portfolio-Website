@@ -41,6 +41,11 @@ function SkillBar({ name, level }) {
 
 const education = [
   {
+    title: "MSc Aerospace Satellite Engineering",
+    meta: "In Progress · 2026–2027",
+    body: "Specialising in satellite subsystem design, orbital mechanics, space mission analysis, and spacecraft thermal and power systems. Building on a BSc in Computer Science with a focus on software and systems engineering.",
+  },
+  {
     title: "BSc Computer Science with Software Engineering",
     meta: "University of Hull · 2022–2026",
     body: "2:1 Honours. Relevant modules: Databases & Networks, Advanced Programming (C#/C++), Operating Systems, Algorithms & Data Structures.",
@@ -49,59 +54,33 @@ const education = [
 
 const skillGroups = [
   {
-    title: "Security",
-    items: ["SIEM", "Log Analysis", "Incident Response", "Vulnerability Assessment", "Threat Detection", "Network Defence", "Pen Testing"],
+    title: "Space Systems",
+    items: ["Orbital Mechanics", "Attitude & Orbit Control", "Spacecraft Thermal", "Power Systems", "RF Communications"],
   },
   {
-    title: "Languages",
+    title: "Programming",
     items: [
       { name: "Python", level: 4 },
-      { name: "Bash", level: 4 },
-      { name: "C#", level: 3 },
-      { name: "SQL", level: 3 },
+      { name: "C/C++", level: 3 },
+      { name: "MATLAB", level: 3 },
+      { name: "Bash", level: 3 },
     ],
   },
   {
-    title: "Consultancy (Exploring)",
-    items: ["Risk Assessment", "Security Auditing", "Compliance", "Stakeholder Communication", "Security Strategy"],
+    title: "Engineering Tools",
+    items: ["CAD (SolidWorks)", "Simulink", "STK (Systems Tool Kit)", "ANSYS", "Git & Linux"],
   },
   {
-    title: "AI Security (Exploring)",
-    items: ["Adversarial ML", "Model Hardening", "Anomaly Detection", "Prompt Engineering", "Secure Data Handling"],
-  },
-];
-
-const certifications = [
-  {
-    name: "CompTIA Security+",
-    issuer: "CompTIA",
-    body: "Currently studying core security domains: network security, cryptography, identity and access management, risk management, and incident response. Building on the foundational knowledge from the Google Cybersecurity certification with a deeper focus on enterprise security architecture and compliance frameworks.",
-  },
-  {
-    name: "Level 1 SOC Analyst · SAL1 Certification",
-    issuer: "TryHackMe",
-    body: "Developing practical SOC analyst skills through hands-on labs. Learning log analysis, SIEM tooling, alert triage, threat hunting, and incident response workflows. I am working through real-world scenarios to build the operational skills needed for a Level 1 SOC role.",
-  },
-  {
-    name: "Google Cybersecurity Certification",
-    issuer: "Google · 2025",
-    body: "This certification covered foundational cybersecurity concepts, including network security, cryptography, and incident response. It included hands-on labs simulating real-world scenarios, which helped me understand how to detect and respond to threats effectively. The skills gained are directly applicable to SOC operations and defensive security practices.",
-    link: "Google%20Cyber%20cert.pdf",
-  },
-  {
-    name: "Foundation Level Threat Intelligence Analyst",
-    issuer: "ArcX · 2026",
-    body: "This certification focused on the fundamentals of threat intelligence, including data collection, analysis, and reporting. It provided insights into identifying and understanding cyber threats, as well as how to use threat intelligence to inform security strategies. The knowledge gained is valuable for roles in threat detection and incident response.",
-    link: "ArcXcertificate.pdf",
+    title: "Engineering Fundamentals",
+    items: ["Systems Engineering", "Signal Processing", "Control Theory", "Project Management", "Technical Reporting"],
   },
 ];
 
 const timeline = [
   { year: "2022", event: "Started BSc Computer Science with Software Engineering at University of Hull" },
-  { year: "2023", event: "Completed my internship at The Open Group" },
-  { year: "2025 - 2026", event: "Completed 2 certifications and continuing studies; built home SOC lab and security tools" },
-  { year: "2026", event: "Graduated with 2:1; focusing on cybersecurity roles" },
-  { year: "Now", event: "Building toward graduate cyber security roles such as SOC Analyst, threat detection, IR or Consulting" },
+  { year: "2023", event: "Completed internship at The Open Group" },
+  { year: "2026", event: "Graduated with 2:1; commenced MSc in Aerospace Satellite Engineering" },
+  { year: "Now", event: "Building expertise in satellite systems, orbital mechanics, and space mission engineering" },
 ];
 
 export default function About() {
@@ -128,16 +107,16 @@ export default function About() {
           </Reveal>
           <Reveal className="max-w-3xl text-lg text-muted">
             <p>
-              I'm Archie Forde, a Computer Science graduate with an interest in cyber
-              security and risk management. I learn through building with examples such as setting up my own lab
-              environments, writing tools from scratch, and investigating how real attacks
-              and defences actually work, rather than just studying the theory.
+              I'm Archie Forde, a Computer Science graduate transitioning into aerospace engineering.
+              I am currently pursuing an MSc in Aerospace Satellite Engineering, driven by a passion
+              for space systems and the challenge of building hardware and software that operates
+              in the harsh environment of orbit.
             </p>
             <p className="mt-4">
-              My immediate goal is a graduate role in cyber security such as SOC analysis, threat
-              detection, or incident response. I'm also interested in cyber security consulting, helping
-              organisations assess risk, audit their security posture, and build strategies that align
-              technical defence with business objectives.
+              I bring a strong software engineering foundation to spacecraft systems — from embedded
+              firmware and ground software to mission planning and data analysis. I learn by building,
+              whether that means simulating orbital dynamics, designing thermal models, or writing
+              tools to process satellite telemetry.
             </p>
           </Reveal>
         </div>
@@ -173,38 +152,6 @@ export default function About() {
                   </li>
                 ))}
               </ul>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
-
-      <Section id="certifications" eyebrow="Certifications" title="Credentials">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {certifications.map((c, i) => (
-            <Reveal key={c.name} delay={i * 120} className="card flex flex-col p-7">
-              <div className="flex items-center justify-between gap-3">
-                <span className="font-mono text-xs uppercase tracking-widest text-accent">
-                  {c.issuer}
-                </span>
-                {!c.link && (
-                  <span className="rounded-full border border-accent/40 bg-accent/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-accent">
-                    In Progress
-                  </span>
-                )}
-              </div>
-              <h3 className="mt-2 text-xl font-semibold">{c.name}</h3>
-              <p className="mt-3 text-muted">{c.body}</p>
-              {c.link && c.link !== "#" && (
-                <a
-                  href={c.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="credential-preview mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-surface px-4 py-3 font-medium text-text transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[0_12px_40px_-12px_rgba(79,157,255,0.35)]"
-                >
-                  View Credential
-                  <span className="text-sm">↗</span>
-                </a>
-              )}
             </Reveal>
           ))}
         </div>

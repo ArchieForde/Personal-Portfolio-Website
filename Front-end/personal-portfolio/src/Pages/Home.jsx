@@ -6,29 +6,29 @@ import ProfilePhoto from "../Components/ProfilePhoto";
 
 const focusAreas = [
   {
-    tag: "Security",
-    title: "Cybersecurity",
-    body: "SOC analysis, threat detection, incident response, and defensive security. Where I'm building real, hands-on experience right now.",
+    tag: "Orbital Systems",
+    title: "Satellite Engineering",
+    body: "Design, analysis, and operation of satellite subsystems — power, thermal, attitude control, and communications payloads.",
     color: "text-accent",
   },
   {
-    tag: "Consultancy (Exploring)",
-    title: "Cyber Security Consulting",
-    body: "Helping organisations assess risk, audit security posture, and build strategies that align technical defence with business objectives.",
+    tag: "Launch & Deployment",
+    title: "Launch Vehicle Integration",
+    body: "Understanding launch environments, separation systems, and the mechanical and thermal challenges of reaching orbit.",
     color: "text-accent",
   },
   {
-    tag: "AI Security (Exploring)",
-    title: "AI Cyber Security",
-    body: "How AI changes both attack and defence. It is a genuine long-term interest I'm building toward.",
+    tag: "Mission Operations",
+    title: "Space Mission Ops",
+    body: "Ground segment operations, telemetry analysis, orbit determination, and mission planning for LEO and GEO platforms.",
     color: "text-accent",
   }
 ];
 
 const stats = [
-  { value: "2:1", label: "BSc Computer Science (Software Eng.)" },
-  { value: "2", label: "Certifications completed" },
-  { value: "∞", label: "Curiosity for hard problems" },
+  { value: "MSc", label: "Aerospace Satellite Engineering" },
+  { value: "BSc 2:1", label: "Computer Science (Software Eng.)" },
+  { value: "∞", label: "Drive for space exploration" },
 ];
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
         <div className="grid w-full grid-cols-1 items-start gap-12 md:grid-cols-[1fr_auto]">
           <div>
             <Reveal className="mb-5">
-              <span className="chip font-mono">Computer Science Graduate · Open to Cyber Security Opportunities</span>
+              <span className="chip font-mono">Aerospace Engineer · MSc Satellite Engineering</span>
             </Reveal>
 
             <SplitText
@@ -55,20 +55,21 @@ export default function Home() {
 
             <Reveal delay={200} className="mt-6 max-w-2xl">
               <p className="text-2xl font-medium text-text md:text-3xl">
-                Cybersecurity · <span className="gradient-text">building toward Defensive Security, Offensive Security &amp; Consultancy</span>
+                Aerospace Engineering · <span className="gradient-text">building toward Satellite Systems &amp; Space Mission Engineering</span>
               </p>
               <p className="mt-4 text-lg text-muted">
-                Computer Science graduate with a hands-on, self-directed approach to security.
-                I build things to understand how they break, and how to defend them.
+                Computer Science graduate transitioning into aerospace, focused on satellite engineering
+                and space mission systems. I bring a strong technical foundation in software and systems
+                engineering to the challenges of designing and operating spacecraft.
               </p>
             </Reveal>
 
             <Reveal delay={350} className="mt-10 flex flex-wrap gap-3">
               <Link
-                to="/projects"
+                to="/about"
                 className="rounded-lg bg-gradient-to-r from-accent to-accent-2 px-6 py-3 font-medium text-ink transition-transform hover:scale-[1.03]"
               >
-                View Projects
+                Explore My Work
               </Link>
               <Link
                 to="/contact"
@@ -86,44 +87,23 @@ export default function Home() {
       </section>
 
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-6 sm:grid-cols-3">
-        {stats.map((s, i) => {
-          const isCert = s.label === "Certifications completed";
-          const isDegree = s.label.startsWith("BSc Computer Science");
-          const isLink = isCert || isDegree;
-          const to = isCert ? "/about#certifications" : isDegree ? "/about#education" : null;
-
-          if (isLink) {
-            return (
-              <Reveal key={s.label} delay={i * 120}>
-                <Link
-                  to={to}
-                  className="card block p-6 no-underline transition-transform hover:scale-[1.02]"
-                >
-                  <div className="text-3xl font-bold gradient-text">{s.value}</div>
-                  <div className="mt-1 text-sm text-muted">{s.label}</div>
-                </Link>
-              </Reveal>
-            );
-          }
-
-          return (
-            <Reveal key={s.label} delay={i * 120}>
-              <Link
-                to="/projects"
-                className="card block p-6 no-underline transition-transform hover:scale-[1.02]"
-              >
-                <div className="text-3xl font-bold gradient-text">{s.value}</div>
-                <div className="mt-1 text-sm text-muted">{s.label}</div>
-              </Link>
-            </Reveal>
-          );
-        })}
+        {stats.map((s, i) => (
+          <Reveal key={s.label} delay={i * 120}>
+            <Link
+              to="/about"
+              className="card block p-6 no-underline transition-transform hover:scale-[1.02]"
+            >
+              <div className="text-3xl font-bold gradient-text">{s.value}</div>
+              <div className="mt-1 text-sm text-muted">{s.label}</div>
+            </Link>
+          </Reveal>
+        ))}
       </div>
 
       <Section
         eyebrow="Focus"
         title="Where I am building expertise"
-        subtitle="Three converging interests that define my work and where I'm heading next."
+        subtitle="Three converging domains that define my path into aerospace engineering."
       >
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {focusAreas.map((f, i) => (
@@ -141,13 +121,14 @@ export default function Home() {
       <Section eyebrow="Now" title="Current trajectory">
         <Reveal className="card p-8">
           <p className="text-lg text-text">
-            Computer Science graduate focused on gaining real security experience in Defensive Security, Offensive Security, and Cyber Security Consultancy.
-            I'm interested in SOC analysis, Threat Detection and Incident Response. I am also interested in Cyber Security Consulting, helping organisations assess risk, audit their
-            security posture, and build strategies that align technical defence with business
-            objectives.
+            I am pursuing an MSc in Aerospace Satellite Engineering, building on my BSc in Computer
+            Science with Software Engineering. My goal is to work on satellite systems — from
+            subsystem design and integration to mission operations and space mission analysis.
+            I am developing expertise in orbital mechanics, spacecraft thermal management,
+            attitude and orbit control, and RF communications.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
-            {["Python", "Linux", "SIEM", "GRC", "Cyber Essentials"].map((t) => (
+            {["Satellite Systems", "Orbital Mechanics", "Thermal Engineering", "RF Communications", "Space Mission Design"].map((t) => (
               <span key={t} className="chip font-mono">
                 {t}
               </span>

@@ -1,23 +1,23 @@
 # Personal Portfolio — Archie Forde
 
-A cybersecurity-focused portfolio website showcasing my journey as a Computer Science graduate building toward SOC analyst and defensive security roles.
+An aerospace engineering portfolio website showcasing my journey as a Computer Science graduate pursuing an MSc in Aerospace Satellite Engineering.
 
 ## About
 
-This portfolio highlights my practical security experience, technical projects, and certifications. It's designed to give recruiters and security professionals a clear view of my skills, learning path, and the hands-on work I've done in cybersecurity.
+This portfolio highlights my academic background, technical skills, and trajectory toward a career in satellite engineering and space mission systems. It is designed to give recruiters and aerospace professionals a clear view of my capabilities, learning path, and the hands-on work I am building toward.
 
 ## What's Inside
 
 - **Home** — Quick snapshot of my background, focus areas, and current trajectory
-- **About** — Academic background, technical toolkit, certifications, and career timeline
-- **Projects** — Hands-on security and AI projects including SOC labs, tooling, and in-progress work
-- **Contact** — Links to my email, LinkedIn, GitHub, and TryHackMe profiles
+- **About** — Academic background, technical toolkit, and career timeline
+- **Projects** — Placeholder for aerospace and satellite engineering projects (to be updated during MSc)
+- **Contact** — Links to email and LinkedIn profiles
 
 ## Key Focus Areas
 
-- Cybersecurity — SOC analysis, threat detection, incident response
-- AI security — Exploring how machine learning intersects with defence
-- Cyber security consulting — Helping organisations assess risk and audit their security posture
+- Satellite Engineering — subsystem design, integration, and operations
+- Orbital Mechanics — orbit determination, mission planning, and trajectory analysis
+- Space Mission Systems — thermal management, power systems, RF communications
 
 ## Tech Stack
 

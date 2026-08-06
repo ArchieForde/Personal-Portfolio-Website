@@ -5,7 +5,6 @@ import useScrolled from "./useScrolled";
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  { to: "/projects", label: "Projects" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -17,7 +16,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 z-40 w-full border-b transition-all duration-300 ${
         scrolled
-          ? "border-border bg-ink/85 shadow-[0_8px_30px_-12px_rgba(79,157,255,0.35)] backdrop-blur-xl"
+          ? "border-border bg-ink/85 shadow-[0_8px_30px_-12px_rgba(0,229,255,0.35)] backdrop-blur-xl"
           : "border-transparent bg-ink/40 backdrop-blur-md"
       }`}
     >

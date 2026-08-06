@@ -23,26 +23,6 @@ const contacts = [
     ),
   },
   {
-    label: "GitHub",
-    sub: "github.com/ArchieForde",
-    href: "https://github.com/ArchieForde",
-    icon: (
-      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
-      </svg>
-    ),
-  },
-  {
-    label: "TryHackMe",
-    sub: "tryhackme.com/p/fordey19",
-    href: "https://tryhackme.com/p/fordey19",
-    icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
-      </svg>
-    ),
-  },
-  {
     label: "Location",
     sub: "EU Citizen · UK Citizen · Dual National · Open to Relocation",
     href: "#",
@@ -60,7 +40,7 @@ export default function Contact() {
     <Section
       eyebrow="Contact"
       title="Let's talk"
-      subtitle="Open to cybersecurity and cyber security consulting roles. Reach out below."
+      subtitle="Open to aerospace and satellite engineering opportunities. Reach out below."
     >
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {contacts.filter((c) => c.label !== "Location").map((c, i) => {
@@ -90,7 +70,7 @@ export default function Contact() {
         {contacts.filter((c) => c.label === "Location").map((c) => {
           return (
             <div key={c.label} className="sm:col-span-2 flex justify-center">
-              <Reveal delay={4 * 100} className="card group">
+              <Reveal delay={2 * 100} className="card group">
                 <div className="flex items-center gap-4 p-7 transition-colors">
                   <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-surface-2 font-mono text-sm font-bold text-accent ring-1 ring-border">
                     {c.icon}
@@ -110,9 +90,8 @@ export default function Contact() {
 
       <Reveal delay={200} className="card mt-8 p-8">
         <p className="text-lg text-text">
-          I'm currently building toward a graduate role in cyber security, with a long-term
-          interest in cyber security consulting. I'm keen to connect
-          about <span className="gradient-text">SOC analyst roles, security consulting, or
+          I am currently pursuing an MSc in Aerospace Satellite Engineering and am keen to connect
+          about <span className="gradient-text">space mission engineering, satellite systems, or
           related opportunities</span>. The fastest way to reach me is email · I usually
           reply within a day.
         </p>
