@@ -13,7 +13,7 @@ export default function ProfilePhoto({
 
   return (
     <div className={`relative ${size} ${className}`}>
-      <div className="profile-ring absolute -inset-1 rounded-full bg-gradient-to-br from-accent via-accent-2 to-accent opacity-70 blur-[2px]" />
+      <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-accent via-accent-2 to-accent opacity-60 blur-[2px]" />
       <div className="relative h-full w-full overflow-hidden rounded-full border border-border bg-surface">
         {!errored && (
           <img
@@ -28,7 +28,7 @@ export default function ProfilePhoto({
         )}
         {errored && (
           <div className="grid h-full w-full place-items-center bg-gradient-to-br from-surface to-ink-soft">
-            <span className="font-mono text-4xl font-bold gradient-text">{initials}</span>
+            <span className="font-mono text-4xl font-bold text-accent">{initials}</span>
             <span className="absolute bottom-3 px-2 text-center font-mono text-[10px] uppercase tracking-widest text-muted">
               [ add /profile.jpg ]
             </span>

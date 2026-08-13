@@ -1,10 +1,17 @@
 import { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import Starfield from "./Components/Starfield";
+import ScrollOrbit from "./Components/ScrollOrbit";
+import Hero from "./Sections/Hero";
+import MissionLog from "./Components/MissionLog";
+import Profile from "./Sections/Profile";
+import Education from "./Sections/Education";
+import Projects from "./Sections/Projects";
+import Skills from "./Sections/Skills";
+import Preparation from "./Sections/Preparation";
+import Experience from "./Sections/Experience";
+import Contact from "./Sections/Contact";
 
 function App() {
   useEffect(() => {
@@ -25,15 +32,23 @@ function App() {
 
   return (
     <div className="relative min-h-screen text-text">
+      <Starfield />
       <Navbar />
-      <main className="pt-16">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+      <main className="relative z-10">
+        <div className="pt-20">
+          <MissionLog />
+          <Hero />
+          <Profile />
+          <Education />
+          <Projects />
+          <Skills />
+          <Preparation />
+          <Experience />
+          <Contact />
+        </div>
       </main>
       <Footer />
+      <ScrollOrbit />
     </div>
   );
 }
