@@ -9,7 +9,7 @@ const projects = [
     status: "In Progress",
     statusColor: "text-accent",
     description:
-      "Designing a deployable spacecraft mechanism (solar panel/antenna hinge) in Onshape, applying materials selection and thermal survival analysis for the space environment.",
+      "Design and Development of a Spring-Loaded Deployment Hinge for a 1U CubeSat Solar Panel in Onshape, applying materials selection and thermal survival analysis for the space environment.",
     tags: ["Onshape", "CAD", "Mechanisms", "Thermal Analysis"],
     has3DViewer: true,
     placeholder: {

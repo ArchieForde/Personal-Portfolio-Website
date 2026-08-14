@@ -35,7 +35,7 @@ function App() {
       <Starfield />
       <Navbar />
       <main className="relative z-10">
-        <div className="pt-20">
+        <div className="pt-[60px]">
           <MissionLog />
           <Hero />
           <Profile />

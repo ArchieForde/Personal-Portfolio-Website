@@ -32,7 +32,7 @@ export default function Preparation() {
         <p className="text-lg text-muted mb-10">
           Formal study provides the framework; this section documents the targeted, self-directed
           preparation that bridges the gap between my CS degree and the physics/hardware
-          fluency required for spacecraft mechanisms engineering.
+          fluency required for aerospace mechanisms engineering.
         </p>
       </Reveal>
 

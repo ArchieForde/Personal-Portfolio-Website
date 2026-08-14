@@ -20,15 +20,15 @@ export default function Hero() {
 
           <Reveal delay={240} className="mt-6">
             <p className="font-heading text-xl font-medium text-text md:text-2xl lg:text-3xl">
-              Aspiring Spacecraft Mechanisms<br className="hidden sm:block" /> &amp; Systems Engineer
+              Aerospace &amp; Astronautical Engineer in Training<br className="hidden sm:block" />
             </p>
           </Reveal>
 
           <Reveal delay={360} className="mt-6 max-w-xl">
             <p className="text-base text-muted md:text-lg">
-              Computer Science graduate transitioning into Aerospace Satellite Engineering —
-              building toward spacecraft mechanisms, deployable systems, and mission-critical
-              hardware design.
+              Computer Science graduate turned Aerospace Engineer in training. Building toward
+              systems and mechanisms engineering across spacecraft, aircraft, and defence. 
+              This is hardware that has to work right the first time.
             </p>
           </Reveal>
 
@@ -53,7 +53,7 @@ export default function Hero() {
         </Reveal>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 md:block">
+      <div className="absolute top-24 left-1/2 hidden -translate-x-1/2 md:block">
         <div className="flex flex-col items-center gap-2 text-muted">
           <span className="font-mono text-[10px] tracking-widest uppercase">Scroll</span>
           <div className="h-8 w-px bg-gradient-to-b from-border to-transparent" />

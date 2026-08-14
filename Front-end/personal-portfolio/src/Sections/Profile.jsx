@@ -23,14 +23,14 @@ export default function Profile() {
         <Reveal delay={150} className="max-w-3xl space-y-6 text-muted">
           <p className="text-base md:text-lg leading-relaxed text-text/90">
             Computer Science graduate (2:1, University of Hull) transitioning into Aerospace
-            Satellite Engineering via an MSc at Northumbria University, with a focus on spacecraft
+            Engineering via an MSc at Northumbria University, with a focus on spacecraft
             mechanisms, deployable mechanism design, and materials/thermal survival in extreme
-            environments. Self-directed technical preparation underway alongside formal study.
+            environments. Self-directed technical preparation is underway alongside formal study.
           </p>
           <p className="text-base md:text-lg leading-relaxed">
             My CS background gives me a strong foundation in systems thinking, software architecture,
-            and analytical problem-solving — all directly transferable to spacecraft systems
-            engineering. Now I am deliberately building the hardware and physics grounding needed
+            and analytical problem-solving which are skills that are all directly transferable to aerospace systems
+            engineering. Now I am actively building the hardware and physics grounding needed
             to design mechanisms that survive launch, deploy reliably on orbit, and operate across
             thermal extremes.
           </p>
