@@ -26,7 +26,7 @@ export default function Hero() {
 
           <Reveal delay={360} className="mt-6 max-w-xl">
             <p className="text-base text-muted md:text-lg">
-              Computer Science graduate turned Aerospace Engineer in training. Building toward
+              Computer Science graduate transitioning into Aerospace Engineering. Building toward
               systems and mechanisms engineering across spacecraft, aircraft, and defence. 
               This is hardware that has to work right the first time.
             </p>
