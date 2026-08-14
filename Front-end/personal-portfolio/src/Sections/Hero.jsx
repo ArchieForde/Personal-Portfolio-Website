@@ -20,7 +20,7 @@ export default function Hero() {
 
           <Reveal delay={240} className="mt-6">
             <p className="font-heading text-xl font-medium text-text md:text-2xl lg:text-3xl">
-              Aerospace &amp; Astronautical Engineer in Training<br className="hidden sm:block" />
+              Aerospace &amp; Astronautical Engineer in Study<br className="hidden sm:block" />
             </p>
           </Reveal>
 
